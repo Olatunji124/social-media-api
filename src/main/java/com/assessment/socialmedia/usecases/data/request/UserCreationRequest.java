@@ -20,6 +20,6 @@ public class UserCreationRequest {
     @Email()
     private String email;
 
-    @NotNull(message = "Profile picture is required.")
+
     private MultipartFile profilePicture;
 }

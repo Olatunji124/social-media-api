@@ -38,7 +38,6 @@ public class JWTServiceImpl implements JWTService {
 
     @Override
     public Map<String, String> verify(String tokenString) {
-        secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
         JwtParser parser = Jwts
                 .parser()
                 .requireIssuer(issuer)
@@ -47,7 +46,6 @@ public class JWTServiceImpl implements JWTService {
     }
 
     private String newToken(Map<String, String> attributes, int minutes) {
-        secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
         LocalDateTime now = LocalDateTime.now();
         final Claims claims = Jwts
                 .claims()

@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class PostManagementUseCaseImpl implements PostManagementUseCase {
 
     private final AppUserEntityDao appUserEntityDao;
-    private PostEntityDao postEntityDao;
+    private final PostEntityDao postEntityDao;
 
     @Override
     public void createPost(AuthenticatedUser authenticatedUser, PostCreationRequest request) {

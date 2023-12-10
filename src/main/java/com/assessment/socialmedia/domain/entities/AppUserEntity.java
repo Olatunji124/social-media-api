@@ -21,6 +21,6 @@ public class AppUserEntity extends AbstractBaseEntity<Long> {
     @Column(nullable = false)
     private String password;
 
-    @OneToOne(optional = false, fetch = FetchType.EAGER)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
     private ResourceFileEntity profilePicture;
 }

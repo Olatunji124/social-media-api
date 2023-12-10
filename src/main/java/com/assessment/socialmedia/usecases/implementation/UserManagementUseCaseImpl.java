@@ -132,7 +132,7 @@ public class UserManagementUseCaseImpl implements UserManagementUseCase {
 
 
     private UserResponse fromEntityToResponse(AppUserEntity appUserEntity) {
-        ResourceFileEntity image = appUserEntity.getProfilePicture();
+        ResourceFileEntity image = resourceFileUseCase.getFileById(appUserEntity.getProfilePicture().getId());
         return UserResponse.builder()
                 .email(appUserEntity.getEmail())
                 .username(appUserEntity.getUsername())

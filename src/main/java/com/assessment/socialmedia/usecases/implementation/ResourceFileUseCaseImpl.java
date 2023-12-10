@@ -50,4 +50,9 @@ public class ResourceFileUseCaseImpl implements ResourceFileUseCase {
         resourceFile.setContentType(profilePicture.getContentType());
         resourceFile.setFileSizeInKb(sizeInMb);
     }
+
+    @Override
+    public ResourceFileEntity getFileById(Long id) {
+        return resourceFileEntityDao.getRecordById(id);
+    }
 }

@@ -43,7 +43,7 @@ public class SecurityConfig {
 
 	private static final RequestMatcher PUBLIC_URLS = new OrRequestMatcher(
 			new AntPathRequestMatcher("/*"),
-			new AntPathRequestMatcher("/api/v1/signup/**"));
+			new AntPathRequestMatcher("/api/v1/user/**"));
 	private static final RequestMatcher PROTECTED_URLS = new NegatedRequestMatcher(PUBLIC_URLS);
 
 	private final JwtTokenProvider jwtTokenProvider;

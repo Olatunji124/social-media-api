@@ -7,4 +7,6 @@ public interface ResourceFileUseCase {
     ResourceFileEntity createResourceFile(MultipartFile file);
 
     void updateProfilePicture(ResourceFileEntity resourceFile, MultipartFile profilePicture);
+
+    ResourceFileEntity getFileById(Long id);
 }
